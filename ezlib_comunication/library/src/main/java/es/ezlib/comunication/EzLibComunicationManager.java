@@ -57,6 +57,11 @@ public class EzLibComunicationManager {
             channels.get(channelId).deleteComunicator(comunicatorId);
     }
 
+    public void clearChannel(int channelId) {
+        if (channels != null && channels.indexOfKey(channelId) >= 0)
+            channels.get(channelId).clearChannel();
+    }
+
     /*==============================================================*/
     /*=======================  COMUNICATOR   =======================*/
     /*==============================================================*/
@@ -77,5 +82,37 @@ public class EzLibComunicationManager {
                 channel.deleteComunicator(comunicatorId);
             }
         }
+    }
+
+    /*======================================================*/
+    /*=======================  SEND  =======================*/
+    /*======================================================*/
+
+    public boolean sendMessageToAll(EzLibMessage message){
+        boolean returnStatus = false;
+        if (comunicators != null){
+            for(int i = 0; i < comunicators.size(); i++)
+                comunicators.get(comunicators.keyAt(i)).receiveMessage(message);
+            returnStatus = true;
+        }
+        return returnStatus;
+    }
+
+    public boolean sendMessageToChannel(int channelId, EzLibMessage message) {
+        boolean returnStatus = false;
+        if (channels != null && channels.indexOfKey(channelId) >= 0){
+            channels.get(channelId).sendMessageToAll(message);
+            returnStatus = true;
+        }
+        return returnStatus;
+    }
+
+    public boolean sendMessageToComunicator(int comunicatorId, EzLibMessage message) {
+        boolean returnStatus = false;
+        if (comunicators != null && comunicators.indexOfKey(comunicatorId) >= 0){
+                comunicators.get(comunicatorId).receiveMessage(message);
+            returnStatus = true;
+        }
+        return returnStatus;
     }
 }

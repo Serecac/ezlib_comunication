@@ -30,6 +30,11 @@ public class EzlibChannel {
         }
     }
 
+    public void clearChannel(){
+        if (subcribedComunicators != null)
+            subcribedComunicators.clear();
+    }
+
     public void sendMessageToAll(EzLibMessage message) {
         if (subcribedComunicators != null) {
             for (int i = 0; i < subcribedComunicators.size(); i++) {
