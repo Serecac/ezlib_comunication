@@ -14,49 +14,49 @@ public class EzlibComunicationInstance {
     /*=======================  CHANNEL  =======================*/
     /*=========================================================*/
 
-    public void createChannel(int channelId) {
+    public static void createChannel(int channelId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.createChannel(channelId);
     }
 
-    public void createChannels(List<Integer> channelIds) {
+    public static void createChannels(List<Integer> channelIds) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.createChannels(channelIds);
     }
 
-    public void deleteChannel(int channelId) {
+    public static void deleteChannel(int channelId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.deleteChannel(channelId);
     }
 
-    public void deleteAllChannels() {
+    public static void deleteAllChannels() {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.deleteAllChannels();
     }
 
-    public void suscribeNewComunicatorToChannel(int channelId, int comunicatorId, EzlibComunicator comunicator) {
+    public static void suscribeNewComunicatorToChannel(int channelId, int comunicatorId, EzlibComunicator comunicator) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.suscribeNewComunicatorToChannel(channelId, comunicatorId, comunicator);
     }
 
-    public void suscribeComunicatorToChannel(int channelId, int comunicatorId) {
+    public static void suscribeComunicatorToChannel(int channelId, int comunicatorId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.suscribeComunicatorToChannel(channelId, comunicatorId);
     }
 
-    public void leaveChannel(int channelId, int comunicatorId) {
+    public static void leaveChannel(int channelId, int comunicatorId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.leaveChannel(channelId, comunicatorId);
     }
 
-    public void clearChannel(int channelId) {
+    public static void clearChannel(int channelId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.clearChannel(channelId);
@@ -66,13 +66,13 @@ public class EzlibComunicationInstance {
     /*=======================  COMUNICATOR   =======================*/
     /*==============================================================*/
 
-    public void addComunicator(int comunicatorId, EzlibComunicator comunicator) {
+    public static void addComunicator(int comunicatorId, EzlibComunicator comunicator) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.addComunicator(comunicatorId, comunicator);
     }
 
-    public void deleteComunicator(int comunicatorId) {
+    public static void deleteComunicator(int comunicatorId) {
         if (ezLibComunicationManager == null)
             init();
         ezLibComunicationManager.deleteComunicator(comunicatorId);
@@ -82,19 +82,19 @@ public class EzlibComunicationInstance {
     /*=======================  SEND  =======================*/
     /*======================================================*/
 
-    public boolean sendMessageToAll(EzLibMessage message) {
+    public static boolean sendMessageToAll(EzLibMessage message) {
         if (ezLibComunicationManager == null)
             init();
         return ezLibComunicationManager.sendMessageToAll(message);
     }
 
-    public boolean sendMessageToChannel(int channelId, EzLibMessage message) {
+    public static boolean sendMessageToChannel(int channelId, EzLibMessage message) {
         if (ezLibComunicationManager == null)
             init();
         return ezLibComunicationManager.sendMessageToChannel(channelId, message);
     }
 
-    public boolean sendMessageToComunicator(int comunicatorId, EzLibMessage message) {
+    public static boolean sendMessageToComunicator(int comunicatorId, EzLibMessage message) {
         if (ezLibComunicationManager == null)
             init();
         return ezLibComunicationManager.sendMessageToComunicator(comunicatorId, message);
