@@ -64,9 +64,6 @@ EzlibChannel
 -------
 The EzlibChannels allow several EzlibComunicators to be grouped so that if a message is sent to the channel, all the EzlibComunicators that are subscribed to the EzlibChannel will receive it.
 
-
-------------------------------------------------------
-
 Different Ways to send
 -------
 - sendMessageToAll(<message>);
