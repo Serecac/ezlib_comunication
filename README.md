@@ -66,10 +66,11 @@ The EzlibChannels allow several EzlibComunicators to be grouped so that if a mes
 
 Different Ways to send
 -------
+```
 - sendMessageToAll(<message>);
 - sendMessageToChannel(<channel_id>, <message>);
 - sendMessageToComunicator(<comunicator_id>, <message>)
-
+```
 
 Contribution
 =======
