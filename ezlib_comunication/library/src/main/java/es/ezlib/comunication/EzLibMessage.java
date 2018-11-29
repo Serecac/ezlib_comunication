@@ -1,5 +1,5 @@
 package es.ezlib.comunication;
 
-public interface EzLibMessage<T> {
+public interface EzlibMessage<T> {
     T getMessageInfo();
 }

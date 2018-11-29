@@ -4,10 +4,10 @@ import java.util.List;
 
 public class EzlibComunicationInstance {
 
-    private static EzLibComunicationManager ezLibComunicationManager = null;
+    private static EzlibComunicationManager ezlibComunicationManager = null;
 
     public static void init() {
-        ezLibComunicationManager = new EzLibComunicationManager();
+        ezlibComunicationManager = new EzlibComunicationManager();
     }
 
     /*=========================================================*/
@@ -15,51 +15,51 @@ public class EzlibComunicationInstance {
     /*=========================================================*/
 
     public static void createChannel(int channelId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.createChannel(channelId);
+        ezlibComunicationManager.createChannel(channelId);
     }
 
     public static void createChannels(List<Integer> channelIds) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.createChannels(channelIds);
+        ezlibComunicationManager.createChannels(channelIds);
     }
 
     public static void deleteChannel(int channelId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.deleteChannel(channelId);
+        ezlibComunicationManager.deleteChannel(channelId);
     }
 
     public static void deleteAllChannels() {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.deleteAllChannels();
+        ezlibComunicationManager.deleteAllChannels();
     }
 
     public static void suscribeNewComunicatorToChannel(int channelId, int comunicatorId, EzlibComunicator comunicator) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.suscribeNewComunicatorToChannel(channelId, comunicatorId, comunicator);
+        ezlibComunicationManager.suscribeNewComunicatorToChannel(channelId, comunicatorId, comunicator);
     }
 
     public static void suscribeComunicatorToChannel(int channelId, int comunicatorId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.suscribeComunicatorToChannel(channelId, comunicatorId);
+        ezlibComunicationManager.suscribeComunicatorToChannel(channelId, comunicatorId);
     }
 
     public static void leaveChannel(int channelId, int comunicatorId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.leaveChannel(channelId, comunicatorId);
+        ezlibComunicationManager.leaveChannel(channelId, comunicatorId);
     }
 
     public static void clearChannel(int channelId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.clearChannel(channelId);
+        ezlibComunicationManager.clearChannel(channelId);
     }
 
     /*==============================================================*/
@@ -67,36 +67,36 @@ public class EzlibComunicationInstance {
     /*==============================================================*/
 
     public static void addComunicator(int comunicatorId, EzlibComunicator comunicator) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.addComunicator(comunicatorId, comunicator);
+        ezlibComunicationManager.addComunicator(comunicatorId, comunicator);
     }
 
     public static void deleteComunicator(int comunicatorId) {
-        if (ezLibComunicationManager == null)
+        if (ezlibComunicationManager == null)
             init();
-        ezLibComunicationManager.deleteComunicator(comunicatorId);
+        ezlibComunicationManager.deleteComunicator(comunicatorId);
     }
 
     /*======================================================*/
     /*=======================  SEND  =======================*/
     /*======================================================*/
 
-    public static boolean sendMessageToAll(EzLibMessage message) {
-        if (ezLibComunicationManager == null)
+    public static boolean sendMessageToAll(EzlibMessage message) {
+        if (ezlibComunicationManager == null)
             init();
-        return ezLibComunicationManager.sendMessageToAll(message);
+        return ezlibComunicationManager.sendMessageToAll(message);
     }
 
-    public static boolean sendMessageToChannel(int channelId, EzLibMessage message) {
-        if (ezLibComunicationManager == null)
+    public static boolean sendMessageToChannel(int channelId, EzlibMessage message) {
+        if (ezlibComunicationManager == null)
             init();
-        return ezLibComunicationManager.sendMessageToChannel(channelId, message);
+        return ezlibComunicationManager.sendMessageToChannel(channelId, message);
     }
 
-    public static boolean sendMessageToComunicator(int comunicatorId, EzLibMessage message) {
-        if (ezLibComunicationManager == null)
+    public static boolean sendMessageToComunicator(int comunicatorId, EzlibMessage message) {
+        if (ezlibComunicationManager == null)
             init();
-        return ezLibComunicationManager.sendMessageToComunicator(comunicatorId, message);
+        return ezlibComunicationManager.sendMessageToComunicator(comunicatorId, message);
     }
 }

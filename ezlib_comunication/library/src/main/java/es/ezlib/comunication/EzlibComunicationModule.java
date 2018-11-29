@@ -10,7 +10,7 @@ public class EzlibComunicationModule {
 
     @Provides
     @Singleton
-    EzLibComunicationManager provideEzLibComunicationManager() {
-        return new EzLibComunicationManager();
+    EzlibComunicationManager provideEzLibComunicationManager() {
+        return new EzlibComunicationManager();
     }
 }

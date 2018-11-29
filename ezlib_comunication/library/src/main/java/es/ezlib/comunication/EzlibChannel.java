@@ -35,7 +35,7 @@ class EzlibChannel {
             subcribedComunicators.clear();
     }
 
-    void sendMessageToAll(EzLibMessage message) {
+    void sendMessageToAll(EzlibMessage message) {
         if (subcribedComunicators != null) {
             for (int i = 0; i < subcribedComunicators.size(); i++) {
                 EzlibComunicator comunicator = subcribedComunicators.get(subcribedComunicators.keyAt(i));

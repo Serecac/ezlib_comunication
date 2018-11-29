@@ -4,12 +4,12 @@ import android.util.SparseArray;
 
 import java.util.List;
 
-public class EzLibComunicationManager {
+public class EzlibComunicationManager {
 
     private SparseArray<EzlibChannel> channels;
     private SparseArray<EzlibComunicator> comunicators;
 
-    public EzLibComunicationManager() {
+    public EzlibComunicationManager() {
         channels = new SparseArray<>();
         comunicators = new SparseArray<>();
     }
@@ -88,7 +88,7 @@ public class EzLibComunicationManager {
     /*=======================  SEND  =======================*/
     /*======================================================*/
 
-    public boolean sendMessageToAll(EzLibMessage message){
+    public boolean sendMessageToAll(EzlibMessage message){
         boolean returnStatus = false;
         if (comunicators != null){
             for(int i = 0; i < comunicators.size(); i++)
@@ -98,7 +98,7 @@ public class EzLibComunicationManager {
         return returnStatus;
     }
 
-    public boolean sendMessageToChannel(int channelId, EzLibMessage message) {
+    public boolean sendMessageToChannel(int channelId, EzlibMessage message) {
         boolean returnStatus = false;
         if (channels != null && channels.indexOfKey(channelId) >= 0){
             channels.get(channelId).sendMessageToAll(message);
@@ -107,7 +107,7 @@ public class EzLibComunicationManager {
         return returnStatus;
     }
 
-    public boolean sendMessageToComunicator(int comunicatorId, EzLibMessage message) {
+    public boolean sendMessageToComunicator(int comunicatorId, EzlibMessage message) {
         boolean returnStatus = false;
         if (comunicators != null && comunicators.indexOfKey(comunicatorId) >= 0){
                 comunicators.get(comunicatorId).receiveMessage(message);

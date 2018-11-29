@@ -1,8 +1,8 @@
 package es.ezlib.comunication_test;
 
-import es.ezlib.comunication.EzLibMessage;
+import es.ezlib.comunication.EzlibMessage;
 
-public class TestMessage implements EzLibMessage<String> {
+public class TestMessage implements EzlibMessage<String> {
 
     private String name;
 

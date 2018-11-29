@@ -3,9 +3,7 @@ package es.ezlib.comunication_test;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import es.ezlib.comunication.EzLibMessage;
 import es.ezlib.comunication.EzlibComunicationInstance;
-import es.ezlib.comunication.EzlibComunicator;
 
 public class TestActivity extends AppCompatActivity {
 
